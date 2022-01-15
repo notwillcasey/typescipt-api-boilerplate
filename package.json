@@ -2,17 +2,25 @@
   "name": "ts-playground",
   "version": "1.0.0",
   "description": "learning TypeScript",
-  "main": "test.js",
+  "main": "src/server_start.ts",
   "dependencies": {
     "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "dotenv": "^12.0.3",
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server_start.ts",
+    "build": "rm -rf build/ && tsc"
   },
   "repository": {
     "type": "git",
